@@ -63,6 +63,10 @@ class App extends React.Component {
     this.setState({ newTag: true });
   }
 
+  closeTagForm = () => {
+    this.setState({ newTag: false });
+  }
+
   render() {
     const { showNote, notes, note, newTag } = this.state;
   
@@ -75,6 +79,7 @@ class App extends React.Component {
             submitNote={this.submitNote}
             showTagForm={this.showTagForm}
             newTag={newTag}
+            closeTagForm={this.closeTagForm}
           /> 
           : 
           <List 
